@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h3> Top Indian collegesTable </h3>
+    <table id="collegesTable" class="display">
+        <thead>
+            <tr>
+                <th>QG Rank</th>
+                <th>Colleges</th>
+                <th>Course Fees</th>
+                <th>Placement %</th>
+                <th>User Reviews</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- College data will be inserted here -->
+        </tbody>
+    </table>
+ <!-- jQuery library -->
+ <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+ <!-- DataTables JS -->
+ <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+ <!-- Your custom scripts -->
+ <script src="script.js"></script>
+</body>
+
+</html>
