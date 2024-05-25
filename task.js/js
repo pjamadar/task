@@ -1,0 +1,121 @@
+// Example data array
+const collegesData = [{
+    rank: 1,
+    name: 'IIT Madras',
+    fees: '₹2.3 Lakhs',
+    placement: '90%',
+    reviews: '4.8 (Excellent)',
+    rating: '1/123 (Engineering)'
+},
+{
+    rank: 2,
+    name: 'IIT Delhi',
+    fees: '₹2.5 Lakhs',
+    placement: '88%',
+    reviews: '4.7 (Excellent)',
+    rating: '2/123 (Engineering)'
+}, // More college data objects
+{
+    rank: 3,
+    name: 'IIT Bombay',
+    fees: '₹2.4 Lakhs',
+    placement: '89%',
+    reviews: '4.6 (Excellent)',
+    rating: '3/123 (Engineering)'
+},
+{
+    rank: 4,
+    name: 'IISc Banglore',
+    fees: '₹2.7 Lakhs',
+    placement: '60%',
+    reviews: '4.9 (Excellent)',
+    rating: '8/123 (Engineering)'
+},
+{
+    rank: 5,
+    name: 'IIT Ahmedabad',
+    fees: '₹22 Lakhs',
+    placement: '100%',
+    reviews: '4.8 (prestigious)',
+    rating: '5/123 (Engineering)'
+},
+{
+    rank: 6,
+    name: 'IIM Banglore',
+    fees: '₹21 Lakhs',
+    placement: '99%',
+    reviews: '4.7 (Elite)',
+    rating: '6/123 (Engineering)'
+},
+{
+    rank: 7,
+    name: 'IIT Calcutta',
+    fees: '₹20 Lakhs',
+    placement: '98%',
+    reviews: '4.6 (Renowed)',
+    rating: '7/123 (Engineering)'
+},
+{
+    rank: 8,
+    name: 'Jadavpur University',
+    fees: '₹0.4 Lakhs',
+    placement: '85%',
+    reviews: '4.5 (well-Regarded)',
+    rating: '99/123 (Engineering)'
+},
+{
+    rank: 9,
+    name: 'University of Delhi',
+    fees: '₹2.3 Lakhs',
+    placement: '80%',
+    reviews: '4.4 (Diverse programs)',
+    rating: '99/123 (Engineering)'
+},
+{
+    rank: 10,
+    name: 'IIT Kharagpur',
+    fees: '₹2.7 Lakhs',
+    placement: '87%',
+    reviews: '4.8 (Excellent)',
+    rating: '10/123 (Engineering)'
+},
+{
+    rank: 11,
+    name: 'Aditya University',
+    fees: '₹2.3 Lakhs',
+    placement: '50%',
+    reviews: '3.8 (Excellent)',
+    rating: '112/123 (Engineering)'
+},
+{
+    rank: 12,
+    name: 'Pragati University',
+    fees: '₹2.3 Lakhs',
+    placement: '90%',
+    reviews: '4.8 (Excellent)',
+    rating: '55/123 (Engineering)'
+}
+];
+
+// Function to populate table with data
+function populateTable(data) {
+const tableBody = document.getElementById('collegesTable').getElementsByTagName('tbody')[0];
+tableBody.innerHTML = ''; // Clear existing table data
+
+data.forEach(college => {
+    let row = tableBody.insertRow();
+    row.insertCell(0).textContent = college.rank;
+    row.insertCell(1).textContent = college.name;
+    row.insertCell(2).textContent = college.fees;
+    row.insertCell(3).textContent = college.placement;
+    row.insertCell(4).textContent = college.reviews;
+    row.insertCell(5).textContent = college.rating;
+});
+}
+
+// Call the function to populate the table on page load
+$(document).ready(function() {
+populateTable(collegesData);
+// Initialize DataTables
+$('#collegesTable').DataTable();
+});
